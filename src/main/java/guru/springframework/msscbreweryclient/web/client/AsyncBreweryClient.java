@@ -14,7 +14,6 @@ import java.util.concurrent.CompletableFuture;
 @Service
 @Slf4j //Lombok annotation
 public class AsyncBreweryClient {
-
     private final RestTemplate restTemplate;
     @Value("${sfg.brewery.beerApiPath}")
     private String beerApiPath;

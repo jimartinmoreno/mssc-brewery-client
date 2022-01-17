@@ -9,13 +9,14 @@ import org.apache.http.nio.reactor.IOReactorException;
 import org.springframework.boot.web.client.RestTemplateCustomizer;
 import org.springframework.http.client.ClientHttpRequestFactory;
 import org.springframework.http.client.HttpComponentsAsyncClientHttpRequestFactory;
+import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 /**
  * Permite definir la configuración para usar Apache HTTP NIO en lugar de la implementación estandar
  * Tiene mejor rendimiento
  */
-//@Component
+@Component
 public class NIORestTemplateCustomizer implements RestTemplateCustomizer {
 
     public ClientHttpRequestFactory clientHttpRequestFactory() throws IOReactorException {
